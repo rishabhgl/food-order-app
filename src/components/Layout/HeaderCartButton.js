@@ -5,11 +5,12 @@ import CartContext from '../../store/cart-context';
 
 const HeaderCartButton = () => {
 
-    const context = useContext(CartContext);
-    return ( <button className= {styles.button} onClick = {context.onOpenCart}>
+    const ctx = useContext(CartContext);
+    const badgeNumber = ctx.items.reduce((currNum,item) => currNum + item.amount,0)
+    return ( <button className= {styles.button} onClick = {ctx.onOpenCart}>
         <span className= {styles.icon}><CartIcon /></span>
         <span>Your Cart</span>
-        <span className= {styles.badge}> 3 </span>
+        <span className= {styles.badge}> {badgeNumber} </span>
     </button> );
 }
  

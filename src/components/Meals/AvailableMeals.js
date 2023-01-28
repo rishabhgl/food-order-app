@@ -5,7 +5,7 @@ import Card from '../UI/Card';
 
 const AvailableMeals = () => {
 
-    const meals = DUMMY_MEALS.map(meal => <MealItem key = {meal.id} description = {meal.description} name = {meal.name} price = {meal.price} />);
+    const meals = DUMMY_MEALS.map(meal => <MealItem key = {meal.id} description = {meal.description} name = {meal.name} price = {meal.price} id = {meal.id}/>);
 
     return ( <Card className = {styles.meals}>
         <ul>
