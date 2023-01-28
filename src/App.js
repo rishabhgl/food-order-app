@@ -1,10 +1,20 @@
+import { Fragment, useContext } from 'react';
+import Header from './components/Layout/Header';
+import Meals from './components/Meals/Meals';
+import Cart from './components/Cart/Cart';
+import CartContext from './store/cart-context';
+
 function App() {
+
+  const context = useContext(CartContext);
+  console.log(context.showCart);
+  
   return (
-    <div className="App">
-      <header>
-        <h2> Let's get started!</h2>
-      </header>
-    </div>
+    <Fragment>
+      {context.showCart && <Cart />}
+      <Header />
+      <Meals />
+    </Fragment>
   );
 }
 
