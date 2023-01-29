@@ -7,7 +7,6 @@ import CartContext from './store/cart-context';
 function App() {
 
   const context = useContext(CartContext);
-  console.log(context.showCart);
   
   return (
     <Fragment>
