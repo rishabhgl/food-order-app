@@ -14,7 +14,7 @@ const AvailableMeals = () => {
         setError(null);
 
         try {
-            const response = await fetch('https://dummy-api-c9a0e-default-rtdb.firebaseio.com/meals.json');
+            const response = await fetch('https://65d89c8fc96fbb24c1bbe9ec.mockapi.io/api/menu');
             if (!response.ok) {
                 throw new Error('Could not fetch data');
             }
@@ -27,7 +27,7 @@ const AvailableMeals = () => {
                     id: mealKey,
                     name: data[mealKey].name,
                     description: data[mealKey].description,
-                    price: data[mealKey].price
+                    price: parseInt(data[mealKey].price)
                 });
             }
 

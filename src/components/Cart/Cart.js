@@ -44,7 +44,7 @@ const Cart = () => {
             order: context.items
         };
         try {
-            const response = await fetch('https://dummy-api-c9a0e-default-rtdb.firebaseio.com/orders.json', {
+            const response = await fetch('https://65d89c8fc96fbb24c1bbe9ec.mockapi.io/api/orders', {
                 method: 'POST',
                 body: JSON.stringify(order),
                 headers: {
